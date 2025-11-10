@@ -45,7 +45,7 @@ public class LlmClient implements Serializable {
         return systemRole;
     }
 
-    public String poserQuestion(String lieu) {
-        return guideTouristique.genererGuide(lieu);
+    public String poserQuestion(String lieu, int nbr) {
+        return guideTouristique.questionner(lieu, nbr);
     }
 }

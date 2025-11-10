@@ -16,6 +16,9 @@ public interface GuideTouristique {
                 }
             """
     )
-    @UserMessage("Donne-moi les informations pour : {lieu}")
-    String genererGuide(@V("lieu") String lieu);
+    // Dans GuideTouristique.java
+
+// ...
+    @UserMessage("Donne-moi les informations pour : {{lieu}} en proposant {{nombre}} endroits ou place a visiter et indique un prix moyen pour un repas")
+    String questionner(@V("lieu") String lieu, @V("nombre") int nbrEndroits);
 }
